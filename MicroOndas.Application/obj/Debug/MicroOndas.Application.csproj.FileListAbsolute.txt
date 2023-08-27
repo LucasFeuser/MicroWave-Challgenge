@@ -57,3 +57,7 @@ C:\Challenge\MicroOndas\MicroOndas.Application\bin\Microsoft.CodeDom.Providers.D
 C:\Challenge\MicroOndas\MicroOndas.Application\obj\Debug\MicroOndas.Application.csproj.CopyComplete
 C:\Challenge\MicroOndas\MicroOndas.Application\obj\Debug\MicroOndas.Application.dll
 C:\Challenge\MicroOndas\MicroOndas.Application\obj\Debug\MicroOndas.Application.pdb
+C:\Challenge\MicroOndas\MicroOndas.Application\bin\Newtonsoft.Json.dll
+C:\Challenge\MicroOndas\MicroOndas.Application\bin\Ninject.dll
+C:\Challenge\MicroOndas\MicroOndas.Application\bin\Newtonsoft.Json.xml
+C:\Challenge\MicroOndas\MicroOndas.Application\bin\Ninject.xml

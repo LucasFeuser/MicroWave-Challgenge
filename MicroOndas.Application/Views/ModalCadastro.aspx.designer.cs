@@ -7,21 +7,21 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MicroOndas.Application
+namespace MicroOndas.Application.Views
 {
 
 
-    public partial class Default
+    public partial class ModalCadastro
     {
 
         /// <summary>
-        /// MICROONDAS control.
+        /// modalCadastro control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm MICROONDAS;
+        protected global::System.Web.UI.HtmlControls.HtmlForm modalCadastro;
 
         /// <summary>
         /// ScriptManager1 control.
@@ -33,66 +33,66 @@ namespace MicroOndas.Application
         protected global::System.Web.UI.ScriptManager ScriptManager1;
 
         /// <summary>
-        /// UpdatePanel1 control.
+        /// NomeDTO control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel UpdatePanel1;
+        protected global::System.Web.UI.WebControls.TextBox NomeDTO;
 
         /// <summary>
-        /// Tempo control.
+        /// AlimentoDTO control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Tempo;
+        protected global::System.Web.UI.WebControls.TextBox AlimentoDTO;
 
         /// <summary>
-        /// Potencia control.
+        /// TempoDTO control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Potencia;
+        protected global::System.Web.UI.WebControls.TextBox TempoDTO;
 
         /// <summary>
-        /// labelOut control.
+        /// PotenciaDTO control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label labelOut;
+        protected global::System.Web.UI.WebControls.TextBox PotenciaDTO;
 
         /// <summary>
-        /// btnAquecimento control.
+        /// InstrucaoDTO control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAquecimento;
+        protected global::System.Web.UI.WebControls.TextBox InstrucaoDTO;
 
         /// <summary>
-        /// btnPausarCancelar control.
+        /// btnAdicionarPreAquecimento control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnPausarCancelar;
+        protected global::System.Web.UI.WebControls.Button btnAdicionarPreAquecimento;
 
         /// <summary>
-        /// Timer1 control.
+        /// btnFecharModalCadastroPreAquecimento control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.Timer Timer1;
+        protected global::System.Web.UI.WebControls.Button btnFecharModalCadastroPreAquecimento;
     }
 }

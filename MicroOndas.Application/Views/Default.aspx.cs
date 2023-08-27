@@ -1,7 +1,9 @@
-﻿using System;
-using System.Text;
-using System.Threading;
+﻿using MicroOndas.Application.DATA;
+using MicroOndas.Application.DTO;
+using System.Collections.Generic;
+using System.Web.UI.WebControls;
 using System.Web.UI;
+using System;
 
 namespace MicroOndas.Application
 {
@@ -17,6 +19,13 @@ namespace MicroOndas.Application
             get { return (bool)(ViewState["Pausado"] ?? false); }
             set { ViewState["Pausado"] = value; }
         }
+
+        private bool isProgramaAquecimento
+        {
+            get { return (bool)(ViewState["ProgramaAquecimento"] ?? false); }
+            set { ViewState["ProgramaAquecimento"] = value; }
+        }
+
         private int Minuto
         {
             get { return (int)(ViewState["Minuto"] ?? 0); }
@@ -34,18 +43,50 @@ namespace MicroOndas.Application
         }
 
 
+        protected void Page_PreInit()
+        {
+            List<ProgramaAquecimentoDTO> programas = JsonDataService.Load();
+            ProgramasPreAquecimento.Items.Add(new ListItem("Selecione uma opção", ""));
+            foreach (var programa in programas)
+            {
+                ListItem listItem = new ListItem(programa.Nome, programa.Alimento);
+                if (programa.isCustomizado)
+                {
+                    listItem.Attributes["style"] = "font-style: italic";
+                    ProgramasPreAquecimento.Items.Add(listItem);
+                }
+                else
+                {
+                    ProgramasPreAquecimento.Items.Add(listItem);
+                }
+            }
+        }
+
+        protected void PreAquecimentoChanged(object sender, EventArgs e)
+        {
+            string programa = ProgramasPreAquecimento.Text;
+            BuscarProgramaPreAquecimento(programa);
+        }
+
         protected void Aquecimento(object sender, EventArgs e)
         {
-            labelOut.Text = "";
+            if (ProgramasPreAquecimento.SelectedIndex != 0)
+            {
+                isProgramaAquecimento = true;
+            }
+
+
             if (isAquecendo)
             { IncrementarAquecimentoEmAndamento(); }
             PegaTempoAquecimento();
+
             isAquecendo = true;
             Timer1.Enabled = true;
         }
 
         protected void Timer1_Tick(object sender, EventArgs e)
         {
+
             if (Segundo > 0)
             {
                 Segundo--;
@@ -59,10 +100,10 @@ namespace MicroOndas.Application
             var tempoCorrido = $"{Minuto:D2}:{Segundo:D2}";
             Tempo.Text = tempoCorrido;
             Contador++;
-            if(Contador > int.Parse(Potencia.Text)) 
-            { Contador = 0; labelOut.Text += " "; }
+            if (Contador > int.Parse(Potencia.Text))
+            { Contador = 0; labelTimer.Text += " "; }
 
-            labelOut.Text += ".";
+            labelTimer.Text += ".";
 
             if (Minuto == 0 && Segundo == 0)
             {
@@ -71,6 +112,7 @@ namespace MicroOndas.Application
                 isPausado = false;
 
                 labelOut.Text = "Aquecimento concluído";
+                labelTimer.Text = "";
                 Tempo.Text = "";
             }
         }
@@ -94,8 +136,13 @@ namespace MicroOndas.Application
                 Timer1.Enabled = false;
                 Minuto = 0;
                 Segundo = 0;
+
                 Tempo.Text = "";
+                Potencia.Text = "10";
+                labelTimer.Text = "";
                 labelOut.Text = "";
+                ProgramasPreAquecimento.SelectedIndex = 0;
+
                 isPausado = false;
             }
             else
@@ -107,7 +154,7 @@ namespace MicroOndas.Application
 
         private void IncrementarAquecimentoEmAndamento()
         {
-            if (Timer1.Enabled)
+            if (Timer1.Enabled && !isProgramaAquecimento)
             {
                 String tempoUpdate = string.Empty;
                 Segundo += 30;
@@ -137,6 +184,40 @@ namespace MicroOndas.Application
             {
                 Timer1.Enabled = true;
             }
+        }
+
+        private void BuscarProgramaPreAquecimento(string programaAquecimento)
+        {
+            List<ProgramaAquecimentoDTO> programas = JsonDataService.Load();
+            bool programaEncontrado = false;
+            foreach (var programa in programas)
+            {
+                if (programa.Alimento.Equals(programaAquecimento))
+                {
+                    programaEncontrado = true;
+                    Tempo.Text = programa.Tempo;
+                    labelOut.Text = programa.Instrucao;
+                    Potencia.Text = programa.Potencia.ToString();
+
+                    Tempo.ReadOnly = true;
+                    Potencia.ReadOnly = true;
+                }
+            }
+
+            if (!programaEncontrado)
+            {
+                Tempo.Text = "";
+                Potencia.Text = "10";
+                labelOut.Text = "";
+
+                Tempo.ReadOnly = false;
+                Potencia.ReadOnly = false;
+            }
+        }
+ 
+        protected void AbrirModal(object sender, EventArgs e)
+        {
+            Response.Redirect("ModalCadastro.aspx");
         }
     }
 }

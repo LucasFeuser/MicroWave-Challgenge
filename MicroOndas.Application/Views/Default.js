@@ -1,9 +1,9 @@
 ﻿$(document).ready(function () {
     var $tempo = $('#Tempo');
     var $potencia = $('#Potencia');
-    var btnAquecimento = $('#btnAquecimento');
+    var $btnAquecimento = $('#btnAquecimento');
 
-    $tempo.on('input', function () {
+    $tempo.on('blur', function () {
         var tempo = parseInt($(this).val(), 10);
 
         if (isNaN(tempo) || tempo < 1 || tempo > 120) {
@@ -22,19 +22,19 @@
     $potencia.on('blur', function () {
         var potencia = parseInt($(this).val(), 10);
 
-        if (isNaN(potencia) || potencia < 1 || tempo > 10) {
+        if (isNaN(potencia) || potencia < 1 || potencia > 10) {
             alert('Digite uma potência válida entre 1 e 10.');
             $(this).val('10');
             return;
         }
-
     });
 
-    $('#btnAquecimento').on('click', function (e) {
+    $btnAquecimento.on('click', function () {
         var tempo = $('#Tempo').val();
 
         if (!/^\d{2}:\d{2}$/.test(tempo)) {
             $('#Tempo').val("00:30");
         }
-    });
+    });   
+
 });
