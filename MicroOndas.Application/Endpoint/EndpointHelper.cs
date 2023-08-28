@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Linq;
 using System.Net.Http;
+using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 
@@ -21,11 +22,33 @@ namespace MicroOndas.Application.Endpoint
             _client = new HttpClient();
         }
 
-        public async Task<string> GetContentFromEndpointAsync()
+        public async Task<string> getProgramasAquecimento()
         {
             try
             {
                 HttpResponseMessage response = await _client.GetAsync(GET_PROGRAMASAQUECIMENTO_ENDPOINT);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    return await response.Content.ReadAsStringAsync();
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            catch (HttpRequestException)
+            {
+                return null;
+            }
+        }
+
+        public async Task<string> postProgramasAquecimento(string json)
+        {
+            try
+            {
+                var content = new StringContent(json, Encoding.UTF8, "application/json");
+                HttpResponseMessage response = await _client.PostAsync(GET_PROGRAMASAQUECIMENTO_ENDPOINT, content);
 
                 if (response.IsSuccessStatusCode)
                 {

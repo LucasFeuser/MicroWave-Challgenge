@@ -226,7 +226,7 @@ namespace MicroOndas.Application
         private async Task<List<ProgramaAquecimentoFilter>> getProgramasAquecimento()
         {
             EndpointHelper helper = new EndpointHelper();
-            string json = await helper.GetContentFromEndpointAsync();
+            string json = await helper.getProgramasAquecimento();
             return JsonConvert.DeserializeObject<List<ProgramaAquecimentoFilter>>(json);
         }
     }
