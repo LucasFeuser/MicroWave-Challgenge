@@ -1,0 +1,13 @@
+C:\Challenge\MicroOndasBack\MicroOndas.BLL\bin\Debug\MicroOndas.BLL.dll
+C:\Challenge\MicroOndasBack\MicroOndas.BLL\bin\Debug\MicroOndas.BLL.pdb
+C:\Challenge\MicroOndasBack\MicroOndas.BLL\bin\Debug\MicroOndas.DATA.dll
+C:\Challenge\MicroOndasBack\MicroOndas.BLL\bin\Debug\MicroOndas.DTO.dll
+C:\Challenge\MicroOndasBack\MicroOndas.BLL\bin\Debug\Newtonsoft.Json.dll
+C:\Challenge\MicroOndasBack\MicroOndas.BLL\bin\Debug\MicroOndas.DATA.pdb
+C:\Challenge\MicroOndasBack\MicroOndas.BLL\bin\Debug\MicroOndas.DTO.pdb
+C:\Challenge\MicroOndasBack\MicroOndas.BLL\bin\Debug\Newtonsoft.Json.xml
+C:\Challenge\MicroOndasBack\MicroOndas.BLL\obj\Debug\MicroOndas.BLL.csproj.AssemblyReference.cache
+C:\Challenge\MicroOndasBack\MicroOndas.BLL\obj\Debug\MicroOndas.BLL.csproj.CoreCompileInputs.cache
+C:\Challenge\MicroOndasBack\MicroOndas.BLL\obj\Debug\MicroOndas.BLL.csproj.CopyComplete
+C:\Challenge\MicroOndasBack\MicroOndas.BLL\obj\Debug\MicroOndas.BLL.dll
+C:\Challenge\MicroOndasBack\MicroOndas.BLL\obj\Debug\MicroOndas.BLL.pdb

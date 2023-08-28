@@ -1,0 +1,6 @@
+C:\Challenge\MicroOndasBack\MicroOndas.DTO\bin\Debug\MicroOndas.DTO.dll
+C:\Challenge\MicroOndasBack\MicroOndas.DTO\bin\Debug\MicroOndas.DTO.pdb
+C:\Challenge\MicroOndasBack\MicroOndas.DTO\obj\Debug\MicroOndas.DTO.csproj.AssemblyReference.cache
+C:\Challenge\MicroOndasBack\MicroOndas.DTO\obj\Debug\MicroOndas.DTO.csproj.CoreCompileInputs.cache
+C:\Challenge\MicroOndasBack\MicroOndas.DTO\obj\Debug\MicroOndas.DTO.dll
+C:\Challenge\MicroOndasBack\MicroOndas.DTO\obj\Debug\MicroOndas.DTO.pdb
