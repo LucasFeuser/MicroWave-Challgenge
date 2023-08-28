@@ -53,11 +53,11 @@ C:\Challenge\MicroOndas\MicroOndas.Application\bin\roslyn\vbc.rsp
 C:\Challenge\MicroOndas\MicroOndas.Application\bin\roslyn\VBCSCompiler.exe
 C:\Challenge\MicroOndas\MicroOndas.Application\bin\roslyn\VBCSCompiler.exe.config
 C:\Challenge\MicroOndas\MicroOndas.Application\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-C:\Challenge\MicroOndas\MicroOndas.Application\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Challenge\MicroOndas\MicroOndas.Application\obj\Debug\MicroOndas.Application.csproj.CopyComplete
-C:\Challenge\MicroOndas\MicroOndas.Application\obj\Debug\MicroOndas.Application.dll
-C:\Challenge\MicroOndas\MicroOndas.Application\obj\Debug\MicroOndas.Application.pdb
 C:\Challenge\MicroOndas\MicroOndas.Application\bin\Newtonsoft.Json.dll
 C:\Challenge\MicroOndas\MicroOndas.Application\bin\Ninject.dll
 C:\Challenge\MicroOndas\MicroOndas.Application\bin\Newtonsoft.Json.xml
 C:\Challenge\MicroOndas\MicroOndas.Application\bin\Ninject.xml
+C:\Challenge\MicroOndas\MicroOndas.Application\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Challenge\MicroOndas\MicroOndas.Application\obj\Debug\MicroOndas.Application.csproj.CopyComplete
+C:\Challenge\MicroOndas\MicroOndas.Application\obj\Debug\MicroOndas.Application.dll
+C:\Challenge\MicroOndas\MicroOndas.Application\obj\Debug\MicroOndas.Application.pdb
