@@ -20,16 +20,9 @@ namespace MicroOndas.API.Controllers
             return _programaAquecimentoBLL.getProgramasAquecimento();
         }
 
-        public void Post([FromBody]string value)
+        public void Post([FromBody] ProgramaAquecimentoDTO programaAquecimento)
         {
-        }
-
-        public void Put(int id, [FromBody]string value)
-        {
-        }
-
-        public void Delete(int id)
-        {
+           _programaAquecimentoBLL.newProgramaAquecimento(programaAquecimento);
         }
     }
 }
